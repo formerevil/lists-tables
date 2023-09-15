@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Charts</title>
 </head>
 <body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style="width:400px">
 <canvas id="myChart"></canvas>
+</div>
 <script>
   var ctx = document.getElementById('myChart')
   var myChart = new Chart(ctx,{
@@ -41,17 +43,27 @@
     }
   });
 </script>
-<canvas id="myChart"></canvas>
+<h1>
+    Pie chart
+</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style="width:200px">
+    <canvas id="myChart2"></canvas>
+</div>
 <script>
-  var ctx = document.getElementById('myChart')
-  var myChart = new Chart(ctx,{
+  var cty=document.getElementById('myChart2');
+  var myChart = new Chart(cty, {
     type: 'pie',
     data: {
-      labels: ['Red','Blue''Yellow'],
+      labels: ['Red', 'Blue', 'Yellow'],
       datasets:[{
         label:'My First Pie Chart',
         data:[300,50,200],
-        backgroundColor: ['rgba(120, 120, 255, 1)'],
+        backgroundColor: [
+            'rgb(255, 99, 150)',
+            'rgb(50, 150, 240)',
+            'rgb(255, 200, 80)'
+        ],
         hoverOffset: 1
       }]
     }
